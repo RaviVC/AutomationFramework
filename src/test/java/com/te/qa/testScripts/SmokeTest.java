@@ -18,6 +18,14 @@ public class SmokeTest extends BaseTest{
 		  test = extent.createTest("Launch TE Application");
 		  launchApp(CONFIG.getProperty("TE_URL"), Environment);
 		  System.out.println(driver.getTitle());
+		  
+	}
+	
+	@Test
+	public void getTitle() {
+		
+		  System.out.println(driver.getTitle());
+		  
 	}
 
 }
