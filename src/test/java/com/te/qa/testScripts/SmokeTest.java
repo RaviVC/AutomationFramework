@@ -19,5 +19,12 @@ public class SmokeTest extends BaseTest{
 		  launchApp(CONFIG.getProperty("TE_URL"), Environment);
 		  System.out.println(driver.getTitle());
 	}
+	
+	@Test
+	public void EnterUsername(String Environment) {
+		
+		  
+		  System.out.println("Username eNTERED");
+	}
 
 }
