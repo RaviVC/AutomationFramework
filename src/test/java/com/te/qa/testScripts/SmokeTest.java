@@ -27,5 +27,12 @@ public class SmokeTest extends BaseTest{
 		  System.out.println(driver.getTitle());
 		  
 	}
+	
+	@Test
+	public void EnterUsername(String Environment) {
+		
+		  
+		  System.out.println("Username eNTERED");
+	}
 
 }
