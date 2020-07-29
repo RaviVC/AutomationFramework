@@ -1,30 +1,33 @@
-package com.te.qa.tesngGroups;
+package com.te.qa.testngOptions;
 
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-public class Groups_Helper {
+
+public class InvocationCountTest {
 	
-	@Test(groups = {"sanity"})
+	
+	@Test(invocationCount = 10)
 	public void test1() {
 		System.out.println("Test1");
 	}
 	
-	@Test(groups= {"sanity"})
+	@Test
 	public void test2() {
 		System.out.println("Test2");
 	}
 	
-	@Test(groups= {"sanity"})
+	@Test
 	public void test3() {
 		System.out.println("Test3");
 	}
 	
-	@Test(groups= {"sanity","regression"})
+	@Test
 	public void test4() {
 		System.out.println("Test4");
 	}
 	
-	@Test(groups = {"regression"})
+	@Test
 	public void test5() {
 		System.out.println("Test5");
 	}

@@ -27,7 +27,7 @@ public class GreatPro_CheckADACompliance extends BaseTest {
 
 	static WebDriver driver = null;
 
-	String[][] requireddata = new String[150][150];;
+	String[][] requireddata = new String[2000][2000];;
 	String[] a;
 
 	public String excelread(int row, int col) {
@@ -118,7 +118,7 @@ public class GreatPro_CheckADACompliance extends BaseTest {
 		String structure = driver.findElement(By.xpath("//li[@id='structure']/span")).getText();
 		String aria = driver.findElement(By.xpath("//li[@id='aria']/span")).getText();
 		//String toggle_type_alt_missing = driver.findElement(By.xpath("//label[@for='toggle_type_alt_missing']")).getText();
-
+		
 		requireddata[i][0] = error;
 		requireddata[i][1] = contrast;
 		requireddata[i][2] = alert;
@@ -130,8 +130,8 @@ public class GreatPro_CheckADACompliance extends BaseTest {
 
 	public void projectengine() {
 		a = new String[excelrowCount()];
-		for (int i = 1; i < excelrowCount(); i++) {
-			//for (int i = 4; i < 10; i++) {
+		//for (int i = 1; i < excelrowCount(); i++) {
+			for (int i = 4; i < 10; i++) {
 			a[i] = excelread(i, 0);
 			System.out.println("URL IS " + a[i]);
 			navigateEachURl(a[i], i);
@@ -149,7 +149,7 @@ public class GreatPro_CheckADACompliance extends BaseTest {
 
 		driver = new ChromeDriver(chromeoptions);
 		driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-		driver.get("https://www.greatpro.org/sign-in/");
+		driver.get("https://www.greatpro.org/live-webinars/");
 
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 		XSSFWorkbook workbook = new XSSFWorkbook();

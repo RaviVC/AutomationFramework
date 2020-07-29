@@ -78,7 +78,6 @@ public class BaseTest extends Generic_Helper {
 	
 	@BeforeTest
 	public void beforeTest(){
-		//homepage = new HomePage();
 		homepage = PageFactory.initElements(driver, HomePage.class);
 	}
 	
@@ -143,8 +142,8 @@ public class BaseTest extends Generic_Helper {
 		
 		driver.get(targetURL);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(2000, TimeUnit.SECONDS);
 	}
 	
 	public String captureScreen(String fileName) {

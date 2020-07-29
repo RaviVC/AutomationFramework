@@ -8,19 +8,14 @@ public class ExcelDataProvider {
 	@Test(dataProvider = "test1Data")
 	public void test1(String username, String password) {
 		System.out.println("The username is -> " + username);
-		System.out.println("The password is ->" + password);
+		System.out.println("The password is -> " + password);
 	}
 
 	@DataProvider(name = "test1Data")
 	public Object[][] getData() {
-		String excelpath = System.getProperty("C:\\Development\\Workspace\\SeleniumAutomationFramework\\Excel");
+		String excelpath = System.getProperty("user.dir") + "\\Excel\\ExcelData.xlsx";
 		Object data[][] = testData(excelpath, "sheet1");
 		return data;
-	}
-
-	public static void main(String[] args) {
-		String excelpath = System.getProperty("user.dir") + "\\Excel\\ExcelData.xlsx";
-		testData(excelpath, "sheet1");
 	}
 
 	public static Object[][] testData(String ExcelPath, String SheetName) {

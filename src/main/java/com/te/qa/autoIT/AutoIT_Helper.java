@@ -22,7 +22,7 @@ public class AutoIT_Helper {
 	
 	public void executeAutoITScript(WebDriver driver,String ScriptPath, String URL) {
 		
-		//driver.get(url);
+		
 		
 	}
 }
